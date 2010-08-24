@@ -1,1 +1,27 @@
-This project is a summary of some laboratories on AVR microcontrollers made during my studies. The schematics file was created with ExpressSCH. This project should have 6 or 7 different functional parts. On the laboratories we were learning how to use ports, counters, LCD display and all of the tasks should work. I would like to implement some more functionality to switch between the tasks with the keyboard and display the task number and description on the LCD. 
+This project is a summary of some laboratories on AVR microcontrollers made during my studies. The schematics file was created with ExpressSCH. This project should have 6 or 7 different functional parts. On the laboratories we were learning how to use ports, counters, LCD display and all of the tasks should work. I would like to implement some more functionality to switch between the tasks with the keyboard and display the task number and description on the LCD.
+
+Description of each lab:
+
+lab1:
+sequential LED turn on/off - 3 different types of implementation:
+a) moving a bit in the registry.
+b) multiplication of a bit (or division).
+c) bit rotation in the registry.
+
+lab2: 
+sequential LED turn on/off - using table.
+
+lab3:
+sequential LED turn on/off and changing direction after key press - using external interrupt.
+
+lab4: 
+using 8-bit timer/counter to count time between turning on/off the LEDs.
+
+lab5:
+using PWM mode of the timer/counter and show it on the LED or LCD display backlight.
+
+lab6:
+usage of the LCD display.
+
+
+Almost each task for the lab is based on the previous one. Difference between the implemented solution and on the lab is that there is a core program that manages all the tasks and handles the keyboard and display. The 6 tasks differ only in certain parts of the code, where some tasks are already handled by the main program. 
