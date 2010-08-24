@@ -1,0 +1,8 @@
+# ignore the following files in src directory that are produced by AVR studio:
+src/AvrBuild.bat
+src/avr-lab01.aps
+src/avr-lab01.aws
+src/avr-lab01.hex
+src/avr-lab01.map
+src/avr-lab01.obj
+src/labels.tmp
