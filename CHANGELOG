@@ -1,6 +1,6 @@
 24 August 2010:
 - Added new schematic with KiCad and exported as pdf file.
 - updated description of each lab in README file.
-- added lib and lib/kicad directories for the libraries used in project (currently only library for KiCad to create schematic with LCD display from the www.kikadlib.org website).
+- added lib and lib/kicad directories for the libraries used in project (currently only library for KiCad to create schematic with LCD display from the www.kicadlib.org website).
 08 August 2010:
 - Created repository and added schematics for the project.
