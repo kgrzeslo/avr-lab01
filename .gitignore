@@ -6,6 +6,7 @@ src/avr-lab01.hex
 src/avr-lab01.map
 src/avr-lab01.obj
 src/labels.tmp
+# ignore the following files in src directory that are output of avra
 src/avr-lab01.cof
 src/avr-lab01.eep.hex
 src/avr-lab01.hex
