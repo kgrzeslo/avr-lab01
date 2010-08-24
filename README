@@ -21,7 +21,7 @@ lab5:
 using PWM mode of the timer/counter and show it on the LED or LCD display backlight.
 
 lab6:
-usage of the LCD display.
+usage of the LCD display (HD44780 compatibile).
 
 
 Almost each task for the lab is based on the previous one. Difference between the implemented solution and on the lab is that there is a core program that manages all the tasks and handles the keyboard and display. The 6 tasks differ only in certain parts of the code, where some tasks are already handled by the main program. 
