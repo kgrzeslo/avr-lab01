@@ -86,7 +86,11 @@ Lab1aHandle:			; subroutine for lab1a
 	rcall LCD_show_string
 ; put here the procedure of the current lab
 ; ...
+	ldi	R24, 0x02
 Lab1aLoop:
+	dec	R24
+	cpi	R24, 0x00
+	breq	Lab1aLoopEnd
 	ldi	TEMP, 0x01
 Lab1aLoop1:
 	com	TEMP
@@ -97,6 +101,9 @@ Lab1aLoop1:
 	cpi	TEMP, 0x40
 	brne	Lab1aLoop1
 	breq	Lab1aLoop
+Lab1aLoopEnd:
+	ldi	TEMP, 0xFF
+	out	LEDOUT, TEMP
 	pop	TEMPH
 	pop	TEMP
 	pop	ZL
