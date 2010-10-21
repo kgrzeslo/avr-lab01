@@ -83,3 +83,13 @@ Wait_us1:
 	pop	DELAY1
 	pop	TEMPH
 	ret
+
+Wait1s:
+	push	TEMP
+	push	TEMPH
+	ldi	TEMP, 100
+	ldi	TEMPH, 10
+	rcall	Wait
+	pop	TEMPH
+	pop	TEMP
+	ret

@@ -78,12 +78,27 @@ Lab6:
 Lab1aHandle:			; subroutine for lab1a
 	push	ZH			
 	push	ZL
+	push	TEMP
+	push	TEMPH
 	rcall	LCD_Clear
 	ldi ZH, high(Menu1a<<1)
 	ldi ZL, low(Menu1a<<1)	; display "menu 1a"
 	rcall LCD_show_string
 ; put here the procedure of the current lab
 ; ...
+Lab1aLoop:
+	ldi	TEMP, 0x01
+Lab1aLoop1:
+	com	TEMP
+	out	LEDOUT, TEMP
+	rcall	Wait1s
+	com	TEMP
+	lsl	TEMP
+	cpi	TEMP, 0x40
+	brne	Lab1aLoop1
+	breq	Lab1aLoop
+	pop	TEMPH
+	pop	TEMP
 	pop	ZL
 	pop	ZH
 	ret
@@ -91,12 +106,16 @@ Lab1aHandle:			; subroutine for lab1a
 Lab1bHandle:
 	push	ZH			
 	push	ZL
+	push	TEMP
+	push	TEMPH
 	rcall	LCD_Clear
 	ldi ZH, high(Menu1b<<1)
 	ldi ZL, low(Menu1b<<1)	; display "menu 1b"
 	rcall LCD_show_string
 ; put here the procedure of the current lab
 ; ...
+	pop	TEMPH
+	pop	TEMP
 	pop	ZL
 	pop	ZH
 	ret
