@@ -41,7 +41,7 @@
 .dseg				; data segment (RAM)
 .org 0x0060			; beginning of SRAM
 KeyInfo: .BYTE 1		; variable KeyInfo in SRAM
-MenuInfo: .BYTE 1		; vatiable MenuInfo in SRAM
+MenuInfo: .BYTE 1		; variable MenuInfo in SRAM
 
 .cseg				; program segment (Flash)
 .org 0

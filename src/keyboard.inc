@@ -52,10 +52,10 @@ Keyboard:
 
 	sbis	KEYPIN, 4	; check keys one by one
 	ldi	TEMP, 1		; and assign proper value
-	sbis	KEYPIN, 5
-	ldi	TEMP, 2
-	sbis	KEYPIN, 6
-	ldi	TEMP, 4
+	sbis	KEYPIN, 5	; key 1 is on PIND4
+	ldi	TEMP, 2		; key 2 is on PIND5
+	sbis	KEYPIN, 6	; key 3 is on PIND6
+	ldi	TEMP, 4		; key 4 is on PIND7
 	sbis	KEYPIN, 7
 	ldi	TEMP, 8
 	sbr	TEMP, 1<<7	; set MSB of KeyInfo - "key pressed"
@@ -64,7 +64,7 @@ Keyboard:
 
 KeyReleased:
 	lds	TEMP, KeyInfo
-	cbr	TEMP, 1<<7	; if key not pressed clear MSB
+	cbr	TEMP, 1<<7	; if key released clear MSB
 	sts	KeyInfo, TEMP	; of KeyInfo - "key released"
 
 KeyReadEnd:
