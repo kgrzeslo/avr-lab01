@@ -1,0 +1,23 @@
+USB SPI programmer under linux - AVR USB PROG by sibit.pl (http://sibit.pl/avr_prog.html)
+erase device:
+sudo avrdude -c stk500v2 -p m8 -P /dev/ttyUSB2 -e
+program flash:
+sudo avrdude -c stk500v2 -p atmega8 -P /dev/ttyUSB2 -Uflash:w:test.hex
+
+windows
+chip erase:
+avrdude -c stk500v2 -p m8 -P com2 -e
+programing:
+avrdude -c stk500v2 -p atmega8 -P com2 -Uflash:w:test.hex
+
+
+debian lenny version of KiCad does not have lots of libraries installed.
+There is a need to obtain them from another source and put into the libraries.
+
+important note:
+to have the funcitonality of changing direction of the snake in lab 3 following needs to be done:
+1. put a variable into RAM and initialize it in the Reset subroutine
+2. direction of snake depends on the value of the variable
+3. main loop for keys change the value of the variable
+4. subroutine for lab3 should read the value of this variable each time the subroutine turns on the first LED
+5. therefore we can distinguish functionality of menu and key bindiings and make the key not having influence on other labs. 
