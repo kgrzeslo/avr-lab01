@@ -318,7 +318,7 @@
 .equ	TXC	=6
 .equ	UDRE	=5
 .equ	FE	=4
-.equ	OR	=3		; old name kept for compatibilty
+;.equ	OR	=3		; old name kept for compatibilty
 .equ	DOR	=3
 .equ	UPE	=2
 .equ	PE	=2

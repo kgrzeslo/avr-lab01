@@ -11,3 +11,11 @@ src/avr-lab01.cof
 src/avr-lab01.eep.hex
 src/avr-lab01.hex
 src/avr-lab01.obj
+# ignore the following files in doc directory that are output of LaTeX
+doc/doc.aux
+doc/doc.bbl
+doc/doc.blg
+doc/doc.log
+doc/doc.out
+doc/doc.pdf
+doc/doc.toc

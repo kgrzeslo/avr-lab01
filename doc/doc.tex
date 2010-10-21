@@ -2,7 +2,7 @@
 \usepackage[a4paper]{geometry}
 \geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=2cm}
 \usepackage[T1]{fontenc}
-%\usepackage[latin2]{inputenc}%for compiling under linux uncomment line 5 and comment line 6 out. 
+%\usepackage[latin2]{inputenc}%for compiling under linux uncomment line 5 and put comment at the beginning of line 6.
 \usepackage[cp1250]{inputenc}
 %\usepackage{polski}
 \usepackage{graphicx}
@@ -44,19 +44,19 @@ Back:
 	mov R30, R19 ; set the initial offset to the table
 Loop:
 	lpm R18, Z ; load to program memory
-	tst R18 ; check if R18 does not have TABLE_BEGIN 
+	tst R18 ; check if R18 does not have TABLE_BEGIN
 	breq Back ; if so return the initial table offset
 	out PORTA, R18 ; if not then display table content
 	dec R30 ; and decrement pointer in a table
-	rjmp Petla
+	rjmp Loop
 
 Table: .DB TABLE_BEGIN, 0xFE, 0xFD, 0xFB, 0xF7, 0xEF, 0xDF, 0xBF, 0x7F
-	; at the beginning of the table there is value 0x00 that would 
+	; at the beginning of the table there is value 0x00 that would
 	; point to the initial table offset
 \end{Verbatim}
 \section{Schematics}
 \begin{center}
-\includegraphics[height=160mm,angle=90]{../kg_avr_atmega8_lab.jpg}
+\includegraphics[height=160mm,angle=90]{../schematic/AVR-lab01.pdf}
 \end{center}
 \begin{thebibliography}{99}
 \addcontentsline{toc}{section}{References}
