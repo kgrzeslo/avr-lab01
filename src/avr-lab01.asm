@@ -76,16 +76,12 @@ Reset:
 	ldi ZL, low(Greeting<<1)
 	rcall LCD_show_string	; show greeting
 
-	ldi	TEMPH, 100
-	ldi	TEMP, 10
-	rcall	Wait
+	rcall	Wait1s		; wait 1s
 	rcall	LCD_clear	; wait 1s and clear the display
 
 	ldi	TEMP, 0x00	; turn on LEDs
 	out	LEDOUT, TEMP
-	ldi	TEMPH, 100
-	ldi	TEMP, 10
-	rcall	Wait		; wait 1s
+	rcall	Wait1s		; wait 1s
 	com	TEMP
 	out	LEDOUT, TEMP	; turn LEDs off
 
